@@ -1,0 +1,21 @@
+body{
+    background-color: aqua;
+    font-size:large;
+    text-align: center;
+}
+
+#txtpeso{
+    background-color: antiquewhite;
+}
+#txtaltura{
+    background-color: antiquewhite;
+}
+#calculo{
+    background-color: aquamarine;
+}
+#txtpeso:focus{
+    background-color:burlywood;
+}
+#txtaltura:focus{
+    background-color:burlywood;
+}

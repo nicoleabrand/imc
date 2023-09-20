@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMC</title>
+  <link rel="stylesheet" href="imc.css">
+  <script>
+    /*
+    function soma(vetor) {
+      let soma = 0;
+      for (v of vetor){
+        soma = soma + v;
+      }
+      return soma;
+    }
+
+    let vet1 = [1, 2, 3, 4];
+    console.log(soma(vet1));
+    */
+
+    function click_calcular() {
+      let peso = document.getElementById("txtpeso").value;
+      let altura = document.getElementById("txtaltura").value;
+      if (peso == ""){
+        alert("Informe o peso");
+      }else if (altura == ""){
+        alert("Informe a altura");
+      }else{
+        let calculo = Number(peso) / (Number(altura)*Number(altura));
+        document.getElementById("calculo").value = calculo;
+        
+      }
+    }
+
+    function click_limpar() {
+      document.getElementById("txtpeso").value = "";
+      document.getElementById("txtaltura").value = "";
+      document.getElementById("calculo").value = "";
+      
+    }
+  </script>
+  
+</head>
+
+<body>
+  <h1 id="tit">
+    Calcular IMC
+  </h1>
+
+  <form>
+    <div>
+      <label for="txtpeso">Peso</label>
+      <input type="number" name="" id="txtpeso" value="1">
+    </div>
+    <div>
+      <label for="txtaltura">altura</label>
+      <input type="number" name="" id="txtaltura">
+    </div>
+    <div>
+      <label for="calculo">Soma: </label>
+      <input type="number" name="" id="calculo" disabled>
+    </div>
+    <div>
+      <input type="button" value="Calcular" onclick="click_calcular();">
+
+      <input type="button" value="Limpar" onclick="click_limpar();">
+    </div>
+  </form>
+
+
+
+</body>
+
+</html>
